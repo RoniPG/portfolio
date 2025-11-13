@@ -1,4 +1,4 @@
-# 💼 Portfolio Personal - Ronaldy
+# 💼 Portfolio Personal
 
 Bienvenido a mi portfolio personal 👋  
 Este sitio web ha sido creado para presentarme como **desarrollador Full Stack** y mostrar los proyectos personales que reflejan mi aprendizaje, experiencia y pasión por la programación.
