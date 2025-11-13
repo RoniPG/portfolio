@@ -1,0 +1,146 @@
+ * {
+     margin: 0;
+     box-sizing: border-box;
+     width: auto;
+ }
+
+ body {
+     margin: 0;
+     height: 100vh;
+     background: linear-gradient(black, grey, black);
+ }
+
+ header {
+     margin-bottom: 10%;
+ }
+
+ nav {
+     margin: 0;
+     background-color: rgb(48, 47, 47);
+     height: 25%;
+
+     ul {
+         display: flex;
+         justify-content: center;
+         gap: 8px;
+
+         li {
+             padding: 8px 8px;
+             list-style: none;
+             transition-duration: 1s;
+             transition-property: scale;
+             transition-timing-function: ease-in-out;
+
+             &:hover {
+                 scale: 1.25;
+             }
+         }
+
+         a {
+             text-decoration: none;
+             color: whitesmoke;
+
+             &:hover {
+                 color: rgb(156, 100, 100);
+             }
+         }
+     }
+
+ }
+
+ #sobre-mi {
+     height: 30%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 16px;
+     margin-bottom: 48px;
+
+     .description {
+         order: 2;
+         width: 50vw;
+
+         h1 {
+             font-size: x-large;
+             color: rgb(156, 100, 100);
+             margin-bottom: 16px;
+         }
+
+         p {
+             color: rgb(179, 179, 179);
+             font-size: medium;
+             padding-left: 4px;
+         }
+     }
+
+     img {
+         border-radius: 100%;
+         width: auto;
+         height: 18vh;
+     }
+ }
+
+ #proyectos {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: auto;
+     padding-top: 12px;
+     border-top: 1px solid;
+     border-color: rgba(128, 128, 128, 0.25);
+     gap: 24px;
+
+     h2 {
+         font-size: xx-large;
+         color: rgb(109, 69, 69);
+         height: min-content;
+     }
+
+     div {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 0 24px 10px;
+         width: 80%;
+         border: grey 1px solid;
+
+         article {
+             padding: 15px;
+             max-width: 50vw;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             transition-duration: 1s;
+             transition-property: scale;
+             transition-timing-function: ease-in-out;
+
+             h3 {
+                 color: whitesmoke;
+                 margin-bottom: 14px;
+             }
+
+             img {
+                 height: 18vh;
+                 width: auto;
+                 margin-bottom: 14px;
+             }
+
+             p {
+                 color: rgb(180, 180, 180);
+                 font-size: smaller;
+                 text-align: center;
+             }
+
+             &:hover {
+                 scale: 1.1;
+             }
+
+         }
+     }
+
+ }
+
+ #habilidades {
+     height: 30%;
+ }
