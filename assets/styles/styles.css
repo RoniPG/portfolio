@@ -89,6 +89,7 @@
      border-top: 1px solid;
      border-color: rgba(128, 128, 128, 0.25);
      gap: 24px;
+     margin-bottom: 24px;
 
      h2 {
          font-size: xx-large;
@@ -102,7 +103,7 @@
          align-items: center;
          margin: 0 24px 10px;
          width: 80%;
-         border: grey 1px solid;
+         border: grey 1px dashed;
 
          article {
              padding: 15px;
@@ -142,5 +143,42 @@
  }
 
  #habilidades {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
      height: 30%;
+     gap: 24px;
+
+     h2 {
+         color: rgb(156, 100, 100);
+     }
+
+     .carousel-container {
+         border: grey 1px dashed;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 80%;
+         height: auto;
+
+         #carousel {
+             display: flex;
+             overflow-x: scroll;
+             width: inherit;
+             border: grey 1px dashed;
+             gap: 14px;
+
+             .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                scroll-snap-align: center;
+                 svg {
+                    max-width: 48px;
+                    min-width: 48px;
+
+                 }
+             }
+         }
+     }
  }
