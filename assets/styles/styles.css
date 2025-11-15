@@ -1,3 +1,12 @@
+ :root {
+     --primary-color: whitesmoke;
+     --primary-color-dark: rgb(180, 180, 180);
+     --secondary-color: rgb(156, 100, 100);
+     --secondary-color-dark: rgb(109, 69, 69);
+     --background-color: linear-gradient(black, grey, black);
+     --secondary-background-color: rgb(48, 47, 47);
+ }
+
  * {
      margin: 0;
      box-sizing: border-box;
@@ -5,9 +14,9 @@
  }
 
  body {
-     margin: 0;
+     margin: none;
      height: 100vh;
-     background: linear-gradient(black, grey, black);
+     background: var(--background-color)
  }
 
  header {
@@ -15,8 +24,8 @@
  }
 
  nav {
-     margin: 0;
-     background-color: rgb(48, 47, 47);
+     margin: none;
+     background-color: var(--secondary-background-color);
      height: 25%;
 
      ul {
@@ -38,10 +47,10 @@
 
          a {
              text-decoration: none;
-             color: whitesmoke;
+             color: var(--primary-color);
 
              &:hover {
-                 color: rgb(156, 100, 100);
+                 color: var(--secondary-color);
              }
          }
      }
@@ -62,12 +71,12 @@
 
          h1 {
              font-size: x-large;
-             color: rgb(156, 100, 100);
+             color: var(--secondary-color);
              margin-bottom: 16px;
          }
 
          p {
-             color: rgb(179, 179, 179);
+             color: var(--primary-color-dark);
              font-size: medium;
              padding-left: 4px;
          }
@@ -93,7 +102,7 @@
 
      h2 {
          font-size: xx-large;
-         color: rgb(109, 69, 69);
+         color: var(--secondary-color-dark);
          height: min-content;
      }
 
@@ -117,7 +126,7 @@
              transition-timing-function: ease-in-out;
 
              h3 {
-                 color: whitesmoke;
+                 color: var(--primary-color);
                  margin-bottom: 14px;
              }
 
@@ -128,7 +137,7 @@
              }
 
              p {
-                 color: rgb(180, 180, 180);
+                 color: var(--primary-color-dark);
                  font-size: smaller;
                  text-align: center;
              }
@@ -142,7 +151,7 @@
 
  }
 
- #habilidades {
+ #tecnologias {
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -150,7 +159,54 @@
      gap: 24px;
 
      h2 {
-         color: rgb(156, 100, 100);
+         color: var(--secondary-color);
+     }
+
+     .carousel-container {
+         border: grey 1px dashed;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 80%;
+         height: 45%;
+
+         #carousel {
+             display: flex;
+             overflow-x: scroll;
+             scrollbar-width: none;
+             width: inherit;
+             gap: 24px;
+
+             .item {
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+
+                 svg {
+                     background-color: grey;
+                     border-radius: 5px;
+                     padding: 5px;
+                     max-width: 15vw;
+                     min-width: 15vw;
+                     max-height: 15vw;
+                     min-height: 15vw;
+
+                 }
+             }
+         }
+     }
+ }
+
+ #certificados {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     align-items: center;
+     height: auto;
+     gap: 24px;
+
+     h2 {
+         color: var(--secondary-color);
      }
 
      .carousel-container {
@@ -164,20 +220,19 @@
          #carousel {
              display: flex;
              overflow-x: scroll;
+             scrollbar-width: none;
              width: inherit;
-             border: grey 1px dashed;
-             gap: 14px;
+             gap: 24px;
 
              .item {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                scroll-snap-align: center;
-                 svg {
-                    max-width: 48px;
-                    min-width: 48px;
-
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 img{
+                    height: auto;
+                    width: 200px;
                  }
+
              }
          }
      }
